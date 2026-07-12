@@ -21,7 +21,7 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
             # Navigate to the project directory on your EC2 instance
-            cd library_api
+            cd CAD_CI-CD_GITHUB_ACTION
             
             # Pull the latest changes from the main branch
             git pull origin main
