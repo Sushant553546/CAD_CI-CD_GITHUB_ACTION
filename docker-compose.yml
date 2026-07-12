@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: library_api_container
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount current directory to /app in container to sync books.json
+      - .:/app
+    environment:
+      - ENVIRONMENT=development
