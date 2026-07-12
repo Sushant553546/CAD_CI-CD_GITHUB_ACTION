@@ -25,6 +25,9 @@ def save_books(books):
         json.dump(books, f, indent=4)
 
 # --- API Endpoints ---
+@app.get("/") 
+def home(): return { "message":"Code modified for CI/CD deployment!" }
+
 @app.get("/", tags=["Root"])
 def read_root():
     return {"message": "Welcome to the Library Management API"}
