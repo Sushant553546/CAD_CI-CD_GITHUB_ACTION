@@ -26,7 +26,7 @@ def save_books(books):
 
 # --- API Endpoints ---
 @app.get("/") 
-def home(): return { "message":"CI/CD Deployment Successful!" }
+def home(): return { "message":"CI/CD Deployment Successful!!" }
 
 @app.get("/", tags=["Root"])
 def read_root():
