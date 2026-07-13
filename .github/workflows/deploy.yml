@@ -20,12 +20,8 @@ jobs:
           username: ${{ secrets.EC2_USERNAME }}
           key: ${{ secrets.EC2_SSH_KEY }}
           script: |
-            # 1. Move into your actual repository folder
             cd ~/CAD_CI-CD_GITHUB_ACTION
-            
-            # 2. Pull down the latest code changes
             git pull origin main
-            
-            # 3. Rebuild and restart the application with administrative rights
-            sudo docker compose down
-            sudo docker compose up -d --build
+            docker compose down
+            docker compose up --build -d
+            docker image prune -f
