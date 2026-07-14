@@ -26,7 +26,7 @@ def save_books(books):
 
 # --- API Endpoints ---
 @app.get("/") 
-def home(): return { "message":"Testing CI/CD pipeline" }
+def home(): return { "message":"Deploy successfully" }
 
 @app.get("/", tags=["Root"])
 def read_root():
